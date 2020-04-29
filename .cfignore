@@ -1,0 +1,15 @@
+.env*
+.idea
+.gitignore
+.git
+.history
+.dockerignore
+CONTRIBUTING.md
+manifest.yml
+manifest.yml*
+*/manifest.yml*
+deployment.yml*
+*/deployment.yml*
+env
+venv
+__pychache__
