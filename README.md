@@ -48,7 +48,7 @@ Edit the `.env` file and provide the following information:
 - `API_KEY` - a key needed to prevent unwanted access to this app.  This can be anything you wish.
 
 #### Slack Settings
-To complete the Slack Settings you need to create a slack app using Slack UI at `https://api.slack.com/apps`. 
+To complete the Slack Settings you need to create a slack app using Slack UI at `https://api.slack.com/apps`. You also may have to `Request to Install` the app before you change the settings below.  
 - `BOT_NAME` is the name you gave your bot in slack
 - `SLACK_WEBHOOK_SECRET` is the verification token slack sends with every request to your bot
 ![Slack verification and bot name](images/SlackBasicInformation.png)
@@ -170,6 +170,10 @@ If having trouble getting Kubernetes to pull the image, see this [help document 
 
     http://<Public-IP>:<NodePort>/slack
     http://<Public-IP>:<NodePort>/slack/handle_action
+
+## Example discussion with the slackbot
+
+[Here's an example](images/example.png) of the type of discussion you can have with the assistant through slack.
    
 ## Built With
 * [IBMCloud](https://www.ibm.com/cloud) - Service provider and application hosting environment
