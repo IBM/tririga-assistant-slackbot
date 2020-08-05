@@ -329,8 +329,15 @@ def handle_skill_response(slack_event, session, response):
     LOGGER.debug("\nWA Message Response:" + json.dumps(response, indent=2))
 
     output = response["output"]
+
     try:
-        response_text = output["generic"][0]["text"]
+        response_text = ""
+        for generic in response["output"]["generic"]:
+            if generic["response_type"] == "text":
+                response_text = response_text + generic["text"]
+
+        LOGGER.debug("response_text is " + response_text)
+
     except IndexError:
         response_text = "{ NO TEXT RETURNED FROM WA }"
 
