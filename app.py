@@ -519,13 +519,16 @@ def call_proxy(message, context, user, session):
 def transform_response_if_html(text):
     """removes HTML code from skill response"""
     if text.find("<a", 0) > -1 and text.find("</a", 0) > -1:
+        anchor_start = text.find("<a", 0)
+        anchor_end = text.find("/a>", anchor_start) + 3
+        
         text_begin = text.find(">", 0) + 1
         text_end = text.find("<", text_begin)
 
         href_begin = text.find("href= ", 0) + len("href= ")
         href_end = text.find(" ", href_begin)
 
-        return text[text_begin:text_end] + "\n" + text[href_begin:href_end]
+        return text[0:anchor_start] + " " + text[text_begin:text_end] + " " + text[anchor_end:len(text)] + "\n" + text[href_begin:href_end]
 
     return text
 
