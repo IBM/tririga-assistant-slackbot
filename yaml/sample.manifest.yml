@@ -1,10 +1,16 @@
-env:
-  API_KEY:
-  BOT_NAME:
-  LOGGING_LEVEL: WARN
-  SLACK_WEBHOOK_SECRET:
-  SLACK_BOT_USER_TOKEN:
-  TA_INTEGRATION_ID:
-  #Optionally can connect to WA directly, just uncomment WA_ env vars and comment out TA_ env var
-  #WA_IAM_KEY:
-  #WA_ASSISTANT_ID:
+---
+applications:
+- memory: 512MB
+  buildpack: python_buildpack
+  command: python app.py
+  env:
+    API_KEY:
+    BOT_NAME:
+    LOGGING_LEVEL: WARN
+    SLACK_WEBHOOK_SECRET:
+    SLACK_BOT_USER_TOKEN:
+    TA_INTEGRATION_ID:
+    TA_PROXY:
+    #Optionally can connect to WA directly, just uncomment WA_ env vars and comment out TA_ env var
+    #WA_IAM_KEY:
+    #WA_ASSISTANT_ID:
