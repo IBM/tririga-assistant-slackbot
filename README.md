@@ -76,7 +76,8 @@ To complete the Slack Settings you need to create a slack app using Slack UI at 
     - `Request URL` should be '\<URL to bot>/slack/handle_action'
     
 #### TRIRIGA Assistant Settings
-- `TA_INTEGRATION_ID` - the Integration ID provided by the IBM AI Applications - TRIRIGA Voice Enablement Team.
+- `TA_INTEGRATION_ID` - the Integration ID provided by the IBM AI Applications.
+- `TA_PROXY` - URL to proxy provided by the IBM AI Applications team.
 
 #### Watson Assistant Settings
 Optionally, you can connect this slackbot to a Watson Assistant created in your own Watson Assistant Service. The following information can be found on the Assistant's Settings page after creating the Assistant in your Watson Assistant Service.  Note, without a Skill provided by the IBM AI Applications - TRIRIGA Voice Enablement Team, connecting the Slackbot to Watson Assistant will not access data in TRIRIGA.
